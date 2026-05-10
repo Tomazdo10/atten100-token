@@ -73,7 +73,7 @@
       height: 48px;
       border-radius: 50%;
       border: 2px solid var(--gold);
-      background: url("atten100-logo.png") center/cover no-repeat;
+      background: url("atten100-logo.png.png") center/cover no-repeat;
     }
 
     .navlinks {
@@ -123,14 +123,18 @@
       padding: 14px 22px;
       border-radius: 999px;
       font-weight: 800;
-      border: 1px solid var(--border);
-      background: rgba(0,0,0,0.42);
+      border: 1px solid var(--gold);
+      background: rgba(216,167,75,0.14);
+      color: var(--text);
       transition: transform 0.2s, background 0.2s;
+      cursor: pointer;
+      font-size: 16px;
     }
 
-    .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.12); }
+    .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.16); }
     .btn.primary { background: linear-gradient(135deg, var(--gold), #fff0a5); color: #111; }
     .btn.green { background: linear-gradient(135deg, var(--green), #1ea66e); color: #05100e; }
+    .btn.telegram { background: linear-gradient(135deg, #33a8e8, #1f7bd8); color: #fff; border-color: #5fc7ff; }
 
     section {
       padding: 74px 7%;
@@ -262,7 +266,8 @@
         <a href="#roadmap">Roadmap</a>
         <a href="#chart">Chart</a>
         <a href="#donations">Donations</a>
-        <a href="https://x.com/ATTEN100Token" target="_blank">X</a>
+        <a href="https://t.me/ATTEN100" target="_blank">Telegram</a>
+        <a href="https://x.com/DrTom83" target="_blank">X</a>
       </div>
     </nav>
 
@@ -271,11 +276,11 @@
       <h1>ATTEN100</h1>
       <p class="subtitle">Inspired by 100 years of dedication to nature, oceans, wildlife and conservation. A Solana community token built around awareness, transparency and future wildlife support.</p>
       <div class="buttons">
-        <a class="btn" href="https://t.me/ATTEN100" target="_blank">Join Telegram</a>
         <a class="btn primary" href="https://raydium.io/swap/?inputMint=sol&outputMint=Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank">Buy ATTEN100</a>
         <a class="btn green" href="https://dexscreener.com/solana/Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank">View Live Chart</a>
+        <a class="btn telegram" href="https://t.me/ATTEN100" target="_blank">Join Telegram</a>
         <button id="copyBtn" class="btn" onclick="copyContract()">Copy Contract</button>
-        <a class="btn" href="https://x.com/ATTEN100Token" target="_blank">Join X</a>
+        <a class="btn" href="https://x.com/DrTom83" target="_blank">Join X</a>
       </div>
     </div>
   </header>
@@ -305,7 +310,7 @@
     <h2 class="section-title">Live Dex Chart</h2>
     <p class="lead">Track price, liquidity, transactions and holders live on DexScreener.</p>
     <div class="dex-frame">
-      <iframe src="https://dexscreener.com/solana/Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR?embed=1&theme=dark"></iframe>
+      <iframe src="https://dexscreener.com/solana/a5db8kqerwqztahrrew9kpd2m4cp8ho1qyivsuboews1?embed=1&theme=dark"></iframe>
     </div>
   </section>
 
@@ -333,7 +338,7 @@
     <h2 class="section-title">Official Links</h2>
     <div class="grid">
       <a class="card" href="https://raydium.io/swap/?inputMint=sol&outputMint=Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank"><h3>Raydium</h3><p>Buy and swap ATTEN100.</p></a>
-      <a class="card" href="https://dexscreener.com/solana/Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank"><h3>DexScreener</h3><p>Live chart and transactions.</p></a>
+      <a class="card" href="https://dexscreener.com/solana/a5db8kqerwqztahrrew9kpd2m4cp8ho1qyivsuboews1" target="_blank"><h3>DexScreener</h3><p>Live chart and transactions.</p></a>
       <a class="card" href="https://solscan.io/token/Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank"><h3>Solscan</h3><p>On-chain token details.</p></a>
       <a class="card" href="https://github.com/Tomazdo10/atten100-token" target="_blank"><h3>GitHub</h3><p>Token metadata and assets.</p></a>
     </div>
