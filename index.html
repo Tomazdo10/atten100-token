@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATTEN100 | Community Token on Solana</title>
+  <meta name="description" content="ATTEN100 is a community-driven Solana token inspired by nature, wildlife, oceans and conservation." />
+  <style>
+    :root {
+      --bg: #061312;
+      --bg2: #0b1f1b;
+      --gold: #d8a74b;
+      --green: #75d86d;
+      --text: #f5f1df;
+      --muted: #b7c5b8;
+      --card: rgba(255,255,255,0.07);
+      --border: rgba(216,167,75,0.28);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top, #123b35 0%, var(--bg) 48%, #020706 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .hero {
+      min-height: 92vh;
+      padding: 28px 7% 70px;
+      background:
+        linear-gradient(rgba(3, 9, 8, 0.52), rgba(3, 9, 8, 0.94)),
+        url("wide_cinematic_banner_header_graphic_high_detai.png") center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      font-size: 20px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      background: url("atten100-logo.png.png") center/cover no-repeat;
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .navlinks a { color: var(--muted); font-weight: 700; }
+    .navlinks a:hover { color: var(--green); }
+
+    .hero-content {
+      max-width: 860px;
+      padding-top: 90px;
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 9vw, 120px);
+      line-height: 0.9;
+      margin: 14px 0;
+      color: var(--gold);
+      text-shadow: 0 8px 28px rgba(0,0,0,0.75);
+    }
+
+    .subtitle {
+      max-width: 720px;
+      font-size: clamp(18px, 2vw, 25px);
+      color: #f8f5e8;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--border);
+      background: rgba(0,0,0,0.42);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover { transform: translateY(-2px); background: rgba(255,255,255,0.12); }
+    .btn.primary { background: linear-gradient(135deg, var(--gold), #fff0a5); color: #111; }
+    .btn.green { background: linear-gradient(135deg, var(--green), #1ea66e); color: #05100e; }
+
+    section {
+      padding: 74px 7%;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .section-title {
+      font-size: clamp(30px, 4vw, 52px);
+      margin: 0 0 16px;
+      color: var(--gold);
+    }
+
+    .lead { max-width: 880px; color: var(--muted); font-size: 18px; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.22);
+    }
+
+    .card h3 { margin-top: 0; color: var(--green); }
+    .big { font-size: 34px; font-weight: 900; color: var(--gold); }
+
+    .roadmap {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .phase { position: relative; }
+    .phase span {
+      display: inline-block;
+      color: #061312;
+      background: var(--gold);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .dex-frame {
+      margin-top: 30px;
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      overflow: hidden;
+      background: #000;
+      min-height: 520px;
+    }
+
+    iframe { width: 100%; height: 620px; border: 0; }
+
+    .contract {
+      word-break: break-all;
+      background: rgba(0,0,0,0.4);
+      border: 1px solid var(--border);
+      padding: 18px;
+      border-radius: 16px;
+      margin-top: 18px;
+      font-family: Consolas, monospace;
+      color: #fff2bf;
+    }
+
+    .tracker {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .warning {
+      border-left: 4px solid var(--gold);
+      background: rgba(216,167,75,0.08);
+      padding: 18px;
+      border-radius: 12px;
+      color: var(--muted);
+      margin-top: 22px;
+    }
+
+    footer {
+      padding: 36px 7%;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    @media (max-width: 900px) {
+      .grid, .roadmap, .tracker { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .hero { min-height: auto; }
+      iframe { height: 520px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <div class="brand"><div class="logo"></div> ATTEN100</div>
+      <div class="navlinks">
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#chart">Chart</a>
+        <a href="#donations">Donations</a>
+        <a href="https://x.com/ATTEN100" target="_blank">X</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <div class="eyebrow">Community token on Solana</div>
+      <h1>ATTEN100</h1>
+      <p class="subtitle">Inspired by 100 years of dedication to nature, oceans, wildlife and conservation. A Solana community token built around awareness, transparency and future wildlife support.</p>
+      <div class="buttons">
+        <a class="btn primary" href="https://raydium.io/swap/?inputMint=sol&outputMint=Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank">Buy on Raydium</a>
+        <a class="btn green" href="https://dexscreener.com/solana/a5db8kqerwqztahrrew9kpd2m4cp8ho1qyivsuboews1" target="_blank">View Chart</a>
+        <a class="btn" href="https://github.com/Tomazdo10/atten100-token" target="_blank">Metadata</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2 class="section-title">For nature. For life. For the future.</h2>
+    <p class="lead">ATTEN100 is a community-driven meme tribute token with a nature-first identity. The project aims to build awareness, grow a strong Solana community, and when sustainable, support wildlife and conservation causes through transparent public donations.</p>
+    <div class="contract">Contract Address: Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR</div>
+    <div class="warning">ATTEN100 is a community tribute project. It is not official, not endorsed by Sir David Attenborough, and not affiliated with any charity or organization unless explicitly announced with public proof.</div>
+  </section>
+
+  <section id="tokenomics">
+    <h2 class="section-title">Tokenomics</h2>
+    <p class="lead">Simple, transparent and community focused.</p>
+    <div class="grid">
+      <div class="card"><h3>Total Supply</h3><div class="big">1B</div><p>1,000,000,000 ATTEN100 minted.</p></div>
+      <div class="card"><h3>Mint Authority</h3><div class="big">Revoked</div><p>No more tokens can be minted.</p></div>
+      <div class="card"><h3>Freeze Authority</h3><div class="big">Disabled</div><p>No wallet freeze authority is set.</p></div>
+      <div class="card"><h3>Liquidity</h3><div class="big">Live</div><p>ATTEN100/SOL pool is live on Raydium.</p></div>
+    </div>
+  </section>
+
+  <section id="chart">
+    <h2 class="section-title">Live Dex Chart</h2>
+    <p class="lead">Track price, liquidity, transactions and holders live on DexScreener.</p>
+    <div class="dex-frame">
+      <iframe src="https://dexscreener.com/solana/a5db8kqerwqztahrrew9kpd2m4cp8ho1qyivsuboews1?embed=1&theme=dark"></iframe>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <h2 class="section-title">Roadmap</h2>
+    <div class="roadmap">
+      <div class="card phase"><span>Phase 1</span><h3>Launch & Trust</h3><p>Mainnet token, metadata, mint revoked, Raydium pool, DexScreener listing and first community posts.</p></div>
+      <div class="card phase"><span>Phase 2</span><h3>Community Growth</h3><p>X, Telegram, holder growth, memes, raids, wildlife content and regular project updates.</p></div>
+      <div class="card phase"><span>Phase 3</span><h3>Awareness Campaigns</h3><p>Community challenges, wildlife awareness posts, educational threads and transparent donation planning.</p></div>
+      <div class="card phase"><span>Phase 4</span><h3>Transparent Donations</h3><p>When sustainable, donations will be made from a public wallet with receipts and community reporting.</p></div>
+    </div>
+  </section>
+
+  <section id="donations">
+    <h2 class="section-title">Donation Tracker</h2>
+    <p class="lead">Donations have not started yet. When the community and liquidity are strong enough, donation activity will be tracked publicly here.</p>
+    <div class="tracker">
+      <div class="card"><h3>Total Donated</h3><div class="big">$0</div><p>Donation program not active yet.</p></div>
+      <div class="card"><h3>Donation Wallet</h3><div class="big">TBA</div><p>A public donation wallet will be announced before any donation campaign begins.</p></div>
+    </div>
+    <div class="warning">No donation claims should be made until funds, wallet addresses, recipients and receipts are publicly shared.</div>
+  </section>
+
+  <section id="links">
+    <h2 class="section-title">Official Links</h2>
+    <div class="grid">
+      <a class="card" href="https://raydium.io/swap/?inputMint=sol&outputMint=Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank"><h3>Raydium</h3><p>Buy and swap ATTEN100.</p></a>
+      <a class="card" href="https://dexscreener.com/solana/a5db8kqerwqztahrrew9kpd2m4cp8ho1qyivsuboews1" target="_blank"><h3>DexScreener</h3><p>Live chart and transactions.</p></a>
+      <a class="card" href="https://solscan.io/token/Cwwfi7aF3pZZcssLofZcfU18p4rwXVSidCLz5p3jDmsR" target="_blank"><h3>Solscan</h3><p>On-chain token details.</p></a>
+      <a class="card" href="https://github.com/Tomazdo10/atten100-token" target="_blank"><h3>GitHub</h3><p>Token metadata and assets.</p></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>ATTEN100 — Together, we can make a difference. 💚</p>
+    <p>Not financial advice. Community tribute project. Always do your own research.</p>
+  </footer>
+</body>
+</html>
